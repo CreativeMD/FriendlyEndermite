@@ -5,7 +5,7 @@ license="LGPL-3.0-only"
 
 [[mods]]
     modId="friendermite"
-    logoFile="friendermite.png"
+    iconFile="friendermite.png"
     version="1.0.6"
     displayName="Friendermite"
     displayURL="https://modrinth.com/mod/friendermite"
