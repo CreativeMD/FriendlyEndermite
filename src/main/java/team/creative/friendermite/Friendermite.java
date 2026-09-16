@@ -3,7 +3,7 @@ package team.creative.friendermite;
 import java.util.Set;
 
 import net.minecraft.world.entity.ai.goal.WrappedGoal;
-import net.minecraft.world.entity.monster.EnderMan;
+import net.minecraft.world.entity.monster.Enderman;
 import net.minecraft.world.entity.monster.Endermite;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -21,7 +21,7 @@ public class Friendermite {
     
     @SubscribeEvent
     public static void entitySpawned(EntityJoinLevelEvent event) {
-        if (event.getEntity() instanceof EnderMan man) {
+        if (event.getEntity() instanceof Enderman man) {
             Set<WrappedGoal> set = ((GoalSelectorAccessor) man.targetSelector).getAvailableGoals();
             for (WrappedGoal goal : set) {
                 if (goal.getGoal() instanceof NearestAttackableTargetGoalAccessor g && g.getTargetType() == Endermite.class) {
